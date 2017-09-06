@@ -6,6 +6,7 @@ import { connect } from 'react-redux';
 import { refrashStudent } from '../actions/AutenticationActions';
 import { GetDisciplines } from '../actions/DisciplinesActions';
 import { SendData } from '../actions/ProductivityActions';
+import { RefrashTimeData } from '../actions/CronometerActions';
 
 class SynchronizeData extends Component {
 
@@ -13,6 +14,7 @@ class SynchronizeData extends Component {
     this.props.refrashStudent();
     this.props.GetDisciplines();
     this.props.SendData();
+    this.props.RefrashTimeData();
   }
 
   componentWillMount() {
@@ -47,4 +49,4 @@ const mapStateToProps = state => (
   }
 );
 
-export default connect(mapStateToProps, { refrashStudent, GetDisciplines, SendData })(SynchronizeData);
+export default connect(mapStateToProps, { refrashStudent, GetDisciplines, SendData, RefrashTimeData })(SynchronizeData);

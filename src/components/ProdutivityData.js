@@ -66,12 +66,20 @@ class ProdutivityData extends Component {
     }
 
     this.props.IsLoading(true);
+
+    let today = new Date();
+    let dd = today.getDate();
+    let year = today.getFullYear();
+    let mm = today.getMonth()+1;
+    let dateNow = year + '-' + mm + '-' +  dd
+
     let data = {
       productivity: {
         total_questions: totalQuestions,
         correct_questions: correctQuestions,
         time_studed: totalTime,
-        discipline_id: discipline
+        discipline_id: discipline,
+        date: dateNow
       }
     }
 

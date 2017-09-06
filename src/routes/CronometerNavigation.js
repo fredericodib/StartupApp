@@ -14,44 +14,53 @@ import {
 import { StackNavigator } from 'react-navigation';
 
 import CronometerMarker from '../components/CronometerMarker';
+import CronometerHistoric from '../components/CronometerHistoric';
+import TopBar from '../components/TopBar';
 
 
 class CronometerHome extends Component {
 
   render() {
     return (
-    	<View style={styles.container} >
+      <View style={styles.panel} >
+        <TopBar name='Cronometro' />
+      	<View style={styles.container} >
 
-      		<View style={styles.Section} >
-      			<TouchableHighlight onPress={() => this.props.navigation.navigate('CronometerMarker')} underlayColor='#1a4f94'>
-	      			<View style={styles.blockFullSize} >
-	      				<View style={styles.blockTop} >
-	      					<Text style={styles.blockTitle} >Cronometrar</Text>
-	      				</View>
-	      				<View style={styles.blockBottom} >
-	      					<Text style={styles.blockDescription} >Marque seu tempo de estudos para os diferentes conteudos.</Text>
-	      				</View>
-	      			</View>
-      			</TouchableHighlight>
+        		<View style={styles.Section} >
+        			<TouchableHighlight onPress={() => this.props.navigation.navigate('CronometerMarker')} underlayColor='#1a4f94'>
+  	      			<View style={styles.blockFullSize} >
+  	      				<View style={styles.blockTop} >
+  	      					<Text style={styles.blockTitle} >Cronometrar</Text>
+  	      				</View>
+  	      				<View style={styles.blockBottom} >
+  	      					<Text style={styles.blockDescription} >Marque seu tempo de estudos para os diferentes conteudos.</Text>
+  	      				</View>
+  	      			</View>
+        			</TouchableHighlight>
 
-      			<TouchableHighlight onPress={() => this.props.navigation.navigate('ProdutivityNavigation')} underlayColor='#1a4f94'>
-	      			<View style={styles.blockFullSize} >
-	      				<View style={styles.blockTop} >
-	      					<Text style={styles.blockTitle} >Histórico</Text>
-	      				</View>
-	      				<View style={styles.blockBottom} >
-	      					<Text style={styles.blockDescription} >Veja o histórico de tempo cronometrado.</Text>
-	      				</View>
-	      			</View>
-      			</TouchableHighlight>
-      		</View>
+        			<TouchableHighlight onPress={() => this.props.navigation.navigate('CronometerHistoric')} underlayColor='#1a4f94'>
+  	      			<View style={styles.blockFullSize} >
+  	      				<View style={styles.blockTop} >
+  	      					<Text style={styles.blockTitle} >Histórico</Text>
+  	      				</View>
+  	      				<View style={styles.blockBottom} >
+  	      					<Text style={styles.blockDescription} >Veja o histórico de tempo cronometrado.</Text>
+  	      				</View>
+  	      			</View>
+        			</TouchableHighlight>
+        		</View>
 
-      	</View>
+        	</View>
+        </View>
     );
   }
 }
 
 const styles = StyleSheet.create({
+  panel: {
+    flex: 1,
+    backgroundColor: '#fff',
+  },
   container: {
     flex: 1,
     backgroundColor: '#fff',
@@ -60,7 +69,7 @@ const styles = StyleSheet.create({
   Section: {
   	flex: 1,
     justifyContent: 'space-between',
-    marginBottom: 25,
+    marginBottom: 15,
     marginTop: 25
   },
   title: {
@@ -112,7 +121,8 @@ const styles = StyleSheet.create({
 
 export default CronometerNavigation = StackNavigator({
 	CronometerHome: { screen: CronometerHome },
-  	CronometerMarker: { screen: CronometerMarker }
+  CronometerMarker: { screen: CronometerMarker },
+  CronometerHistoric: { screen: CronometerHistoric }
 }, {
   	headerMode: 'none'
 });
