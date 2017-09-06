@@ -12,14 +12,12 @@ import {
   Image
 } from 'react-native';
 
-import SynchronizeData from './SynchronizeData';
 
 export default class HomeScreen extends Component {
 
   render() {
     return (
     	<ScrollView style={styles.container} >
-        <SynchronizeData />
     		<View style={styles.titleContainer} >
       			<Text style={styles.title} >Torne seus estudos mais inteligente</Text>
       		</View>

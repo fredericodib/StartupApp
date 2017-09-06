@@ -10,11 +10,14 @@ import Login from './components/Login';
 
 import { Routes } from './routes';
 
+import SynchronizeData from './components/SynchronizeData';
 
 class App extends Component {
   
   render() {
-    axios.defaults.baseURL = 'http://10.0.2.2:3000';
+    // local: http://10.0.2.2:3000
+    //produção: http://luminist.herokuapp.com
+    axios.defaults.baseURL = 'http://luminist.herokuapp.com';
     axios.defaults.headers.common['Authorization'] = "Token token=" + this.props.token;
     axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
 
@@ -26,6 +29,7 @@ class App extends Component {
     return (
       <View style={{flex: 1}}>
         <Spinner visible={this.props.loading} textContent={"Carregando..."} textStyle={{color: '#FFF'}} />
+        <SynchronizeData />
         <Routes />
       </View>
     );

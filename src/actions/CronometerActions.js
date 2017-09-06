@@ -129,12 +129,8 @@ export const RefrashTimeData = () => {
 const SendDataTime = (dispatch) => {
 	let totalDuration = store.getState().CronometerReducer.totalDuration;
 	let discipline = store.getState().CronometerReducer.discipline;
-	let timeHistoric = store.getState().CronometerReducer.timeHistoric;
 	let dataTimeThatCuldNotBeSend = store.getState().CronometerReducer.dataTimeThatCuldNotBeSend;
 
-	if (!timeHistoric) {
-		timeHistoric = [];
-	}
 	if (!dataTimeThatCuldNotBeSend) {
 		dataTimeThatCuldNotBeSend = [];
 	}
@@ -152,10 +148,6 @@ const SendDataTime = (dispatch) => {
         	date: dateNow
       	}
     }
-
-    timeHistoric.push(data);
-
-    dispatch({ type: "UpdateTimeHistoric", payload: { timeHistoric: timeHistoric } });
 
     axios.post('/api/cronometer/create.json', data)
       	.then(response => {
