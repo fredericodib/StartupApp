@@ -47,7 +47,8 @@ class Timer extends Component {
 
     return (
       <View style={styles.container}>
-        <Text style={styles.title} >{!this.props.inBreak ? "Hora dos estudos, tempo restante:" : "Descanso, seu novo treino começa em:"}</Text>
+        <Text style={styles.title} >{!this.props.inBreak ? "Hora dos estudos!" : "Descanso"}</Text>
+        <Text style={styles.title} >{!this.props.inBreak ? "Tempo restante:" : "Seu novo treino começa em:"}</Text>
         <View style={styles.cronometerSection} >
           <Text style={styles.cronometerNumber} >{this.timeFormated()}</Text>
         </View>

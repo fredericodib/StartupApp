@@ -33,7 +33,7 @@ export default class HomeScreen extends Component {
       					<Text style={styles.blockTitle} >Produtividade</Text>
       				</View>
       				<View style={styles.blockBottom} >
-      					<Text style={styles.blockDescription} >Informe seu rendimento e gera gráficos para te auxiliar em seus estudos.</Text>
+      					<Text style={styles.blockDescription} >Informe seu rendimento e gere gráficos para auxiliá-lo em seus estudos</Text>
       				</View>
       			</View>
     			</TouchableHighlight>
@@ -51,7 +51,7 @@ export default class HomeScreen extends Component {
       					<Text style={styles.blockTitle} >Cronometro</Text>
       				</View>
       				<View style={styles.blockBottom} >
-      					<Text style={styles.blockDescription} >Marque seu tempo de estudos em cada assunto para um maior embasamento.</Text>
+      					<Text style={styles.blockDescription} >Marque seu tempo de estudos em cada assunto</Text>
       				</View>
       			</View>
     			</TouchableHighlight>
@@ -68,7 +68,7 @@ export default class HomeScreen extends Component {
       					<Text style={styles.blockTitle} >Perfil</Text>
       				</View>
       				<View style={styles.blockBottom} >
-      					<Text style={styles.blockDescription} >Confira e edite seus dados.</Text>
+      					<Text style={styles.blockDescription} >Confira e edite seus dados</Text>
       				</View>
       			</View>
     			</TouchableHighlight>

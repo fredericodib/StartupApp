@@ -22,8 +22,8 @@ class CronometerMarker extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      totalDuration: 5000,
-      breakDuration: 5000,
+      totalDuration: 5000 * 60,
+      breakDuration: 5000 * 60,
       numberOfSeries: 1,
       discipline: ''
     };
@@ -50,7 +50,7 @@ class CronometerMarker extends Component {
         <View style={styles.container}>
           <Text style={styles.marginBottom} >Recomendado: Séries de 40min - 15min</Text>
 
-          <Text>Selecione o número de séries.</Text>
+          <Text>Selecione o número de séries</Text>
           <Picker
             style={styles.input}
             onValueChange={(numberOfSeries) => this.setState({numberOfSeries})}
@@ -64,47 +64,47 @@ class CronometerMarker extends Component {
             <Picker.Item label="5" value="5" />
           </Picker>
 
-          <Text>Selecione o tempo de estudo de cada série(em minutos).</Text>
+          <Text>Selecione o tempo de estudo de cada série (em minutos)</Text>
           <Picker
             style={styles.input}
             onValueChange={(totalDuration) => this.setState({totalDuration})}
             placeholder="Tempo de estudos."
             selectedValue={this.state.totalDuration}
           >
-            <Picker.Item label="5" value={5 * 1000} />
-            <Picker.Item label="10" value={10 * 1000} />
-            <Picker.Item label="15" value={15 * 1000} />
-            <Picker.Item label="20" value={20 * 1000} />
-            <Picker.Item label="30" value={30 * 1000} />
-            <Picker.Item label="40" value={40 * 1000} />
-            <Picker.Item label="50" value={50 * 1000} />
-            <Picker.Item label="60" value={60 * 1000} />
-            <Picker.Item label="70" value={70 * 1000} />
-            <Picker.Item label="80" value={80 * 1000} />
-            <Picker.Item label="90" value={90 * 1000} />
+            <Picker.Item label="5" value={5 * 1000 * 60} />
+            <Picker.Item label="10" value={10 * 1000 * 60} />
+            <Picker.Item label="15" value={15 * 1000 * 60} />
+            <Picker.Item label="20" value={20 * 1000 * 60} />
+            <Picker.Item label="30" value={30 * 1000 * 60} />
+            <Picker.Item label="40" value={40 * 1000 * 60} />
+            <Picker.Item label="50" value={50 * 1000 * 60} />
+            <Picker.Item label="60" value={60 * 1000 * 60} />
+            <Picker.Item label="70" value={70 * 1000 * 60} />
+            <Picker.Item label="80" value={80 * 1000 * 60} />
+            <Picker.Item label="90" value={90 * 1000 * 60} />
           </Picker>
 
-          <Text>Selecione o tempo de intervalo de cada Série(em minutos).</Text>
+          <Text>Selecione o tempo de intervalo de cada Série (em minutos)</Text>
           <Picker
             style={styles.input}
             onValueChange={(breakDuration) => this.setState({breakDuration})}
             placeholder="Tempo de descanso."
             selectedValue={this.state.breakDuration}
           >
-            <Picker.Item label="5" value={5 * 1000} />
-            <Picker.Item label="10" value={10 * 1000} />
-            <Picker.Item label="15" value={15 * 1000} />
-            <Picker.Item label="20" value={20 * 1000} />
-            <Picker.Item label="30" value={30 * 1000} />
-            <Picker.Item label="40" value={40 * 1000} />
-            <Picker.Item label="50" value={50 * 1000} />
-            <Picker.Item label="60" value={60 * 1000} />
-            <Picker.Item label="70" value={70 * 1000} />
-            <Picker.Item label="80" value={80 * 1000} />
-            <Picker.Item label="90" value={90 * 1000} />
+            <Picker.Item label="5" value={5 * 1000 * 60} />
+            <Picker.Item label="10" value={10 * 1000 * 60} />
+            <Picker.Item label="15" value={15 * 1000 * 60} />
+            <Picker.Item label="20" value={20 * 1000 * 60} />
+            <Picker.Item label="30" value={30 * 1000 * 60} />
+            <Picker.Item label="40" value={40 * 1000 * 60} />
+            <Picker.Item label="50" value={50 * 1000 * 60} />
+            <Picker.Item label="60" value={60 * 1000 * 60} />
+            <Picker.Item label="70" value={70 * 1000 * 60} />
+            <Picker.Item label="80" value={80 * 1000 * 60} />
+            <Picker.Item label="90" value={90 * 1000 * 60} />
           </Picker>
 
-          <Text>Selecione o tema estudado.</Text>
+          <Text>Selecione a disciplina estudada</Text>
           <Picker
               style={styles.input}
               onValueChange={(discipline) => this.setState({discipline})}

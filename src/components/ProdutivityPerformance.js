@@ -67,21 +67,21 @@ class ProdutivityPerformance extends Component {
         <View style={styles.section}>
 
           <View>
-            <Text style={styles.text} >Selecione o tema estudado.</Text>
+            <Text style={styles.text} >Selecione a disciplina estudada</Text>
             <Picker
               style={styles.input}
               onValueChange={(discipline) => this.setState({discipline})}
               placeholder="Tema"
               selectedValue={this.state.discipline}
             >
-              <Picker.Item label="Todos os temas" value="all" />
+              <Picker.Item label="Todas as disciplinas" value="all" />
               {this.props.disciplines.map(discipline => (
                 <Picker.Item label={discipline.name} value={discipline.id} key={discipline.id} />
               ))} 
             </Picker>
           </View>
           
-          <Text style={styles.text} >Selecione a faixa de tempo desejada</Text>
+          <Text style={styles.text} >Selecione o intervalo desejado</Text>
           <Picker
             style={styles.input}
             onValueChange={(rengeTime) => this.setState({rengeTime})}

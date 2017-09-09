@@ -80,21 +80,21 @@ const UpdateTime = (time) => {
 
 const EndBreakNotification = () => {
   	PushNotification.localNotification({
-    	message: "Descanso acabou, se prepare para voltar aos estudos!", 
+    	message: "O descanso acabou, se prepare para voltar aos estudos!", 
     	vibration: 3000
   	});
 }
 
 const StartBreakNotification = () => {
   	PushNotification.localNotification({
-    	message: "A rodade de estudos acabou, marque seu descanso para proxima rodada!",
+    	message: "A rodade de estudos acabou, descanse e se prepare para a próxima rodada!",
     	vibration: 3000 
   	});
 }
 
 const EndTrainingNotification = () => {
   	PushNotification.localNotification({
-    	message: "Parabens, você conseguiu finalizar seu treino!", 
+    	message: "Parabens, você concluiu seus estudos!", 
     	vibration: 3000
   	});
 }
@@ -213,7 +213,7 @@ export const CronometerStart = () => {
 			    }
 			}
 		    
-		}, 100);
+		}, 1000);
 	}
 
 }

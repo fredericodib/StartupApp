@@ -111,7 +111,7 @@ class ProdutivityData extends Component {
     return (
       <ScrollView style={styles.container}>
         <View style={styles.section}>
-          <Text style={styles.text} >Informe o numero total de questões respondidas.</Text>
+          <Text style={styles.text} >Informe o total de questões respondidas</Text>
           <TextInput
             style={styles.input, styles.text }
             onChangeText={(totalQuestions) => this.setState({totalQuestions})}
@@ -119,7 +119,7 @@ class ProdutivityData extends Component {
             value={this.state.totalQuestions}
             keyboardType='numeric'
           />
-          <Text style={styles.text} >Informe o numero total de questões acertadas.</Text>
+          <Text style={styles.text} >Informe o total de respostas corretas</Text>
           <TextInput
             style={styles.input, styles.text}
             onChangeText={(correctQuestions) => this.setState({correctQuestions})}
@@ -127,7 +127,7 @@ class ProdutivityData extends Component {
             value={this.state.correctQuestions}
             keyboardType='numeric'
           />
-          <Text  style={styles.text}  >Informe o numero total de tempo gasto(em minutos).</Text>
+          <Text  style={styles.text}  >Informe o tempo total gasto(em minutos)</Text>
           <TextInput
             style={styles.input, styles.text}
             onChangeText={(totalTime) => this.setState({totalTime})}
@@ -135,7 +135,7 @@ class ProdutivityData extends Component {
             value={this.state.totalTime}
             keyboardType='numeric'
           />
-          <Text  style={styles.text}  >Selecione o tema estudado.</Text>
+          <Text  style={styles.text}  >Selecione a disciplina estudada</Text>
           <Picker
             style={styles.input}
             onValueChange={(discipline) => this.setState({discipline})}

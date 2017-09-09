@@ -33,7 +33,7 @@ class CronometerHome extends Component {
 	      					<Text style={styles.blockTitle} >Cronometrar</Text>
 	      				</View>
 	      				<View style={styles.blockBottom} >
-	      					<Text style={styles.blockDescription} >Marque seu tempo de estudos para os diferentes conteudos.</Text>
+	      					<Text style={styles.blockDescription} >Marque seu tempo de estudos para as diferentes disciplinas</Text>
 	      				</View>
 	      			</View>
       			</TouchableHighlight>
@@ -47,7 +47,7 @@ class CronometerHome extends Component {
 	      					<Text style={styles.blockTitle} >Histórico</Text>
 	      				</View>
 	      				<View style={styles.blockBottom} >
-	      					<Text style={styles.blockDescription} >Veja o histórico de tempo cronometrado.</Text>
+	      					<Text style={styles.blockDescription} >Veja o histórico de tempo cronometrado</Text>
 	      				</View>
 	      			</View>
       			</TouchableHighlight>
