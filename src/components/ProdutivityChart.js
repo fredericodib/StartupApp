@@ -96,7 +96,7 @@ export default ProdutivityChart = props => {
     );
   }
   return(
-    <View style={styles.container} >
+    <View style={styles.container}>
       <Text style={styles.titleBig} >Relatorio de rendimento</Text>
 
       <Pie data={props.data.pieChartTotalData} options={pieOptions} accessorKey='data'/>
@@ -109,14 +109,14 @@ export default ProdutivityChart = props => {
           <Text style={styles.titleSmall} >Tempo gasto por disciplina:</Text>
           <Pie data={props.data.pieChartTotalTime} options={pieOptions} accessorKey='data'/>
           {props.data.pieChartTotalTime.map(elemen => (
-            <Text style={styles.text} key={elemen.name} >{elemen.name}: {elemen.data}min</Text>
+            <Text style={styles.text} key={elemen.name} >{elemen.full_name}: {elemen.data}min</Text>
           ))} 
           <Text style={styles.text} >Total de tempo: {props.data.totalTime}min</Text>
 
           <Text style={styles.titleSmall} >Porcentagem de acerto por disciplina:</Text>
           <Bar data={props.data.BarChart} options={BarOptions} accessorKey='data'/>
           {props.data.BarChart.map(elemen => (
-            <Text style={styles.text} key={elemen[0].name} >{elemen[0].name}: {elemen[0].data}%</Text>
+            <Text style={styles.text} key={elemen[0].name} >{elemen[0].full_name}: {elemen[0].data}%</Text>
           ))} 
         </View>
       }

@@ -45,7 +45,7 @@ class CronometerMarker extends Component {
       );
     }
     return (
-      <View style={styles.section}>
+      <ScrollView style={styles.section}>
         <TopBar name='Configurar Cronometro' goBack={this.props.navigation.goBack}/>
         <View style={styles.container}>
           <Text style={styles.marginBottom} >Recomendado: Séries de 40min - 15min</Text>
@@ -127,7 +127,7 @@ class CronometerMarker extends Component {
             )}
           />
         </View>
-      </View>
+      </ScrollView>
     );
   }
   

@@ -62,7 +62,7 @@ class ProdutivityPerformance extends Component {
   render() {
 
     return (
-      <ScrollView style={styles.container}>
+      <ScrollView style={styles.container} >
         { (this.state.chartData == '') && 
         <View style={styles.section}>
 

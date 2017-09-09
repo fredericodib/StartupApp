@@ -109,7 +109,7 @@ class ProdutivityData extends Component {
   render() {
 
     return (
-      <View style={styles.container}>
+      <ScrollView style={styles.container}>
         <View style={styles.section}>
           <Text style={styles.text} >Informe o numero total de questões respondidas.</Text>
           <TextInput
@@ -164,7 +164,7 @@ class ProdutivityData extends Component {
             </TouchableHighlight>
           }
         </View>
-      </View>
+      </ScrollView>
     );
   }
 }

@@ -12,7 +12,10 @@ PushNotification.configure({
         sound: true
     },
 	requestPermissions: true,
+	autoCancel: false,
+    vibration: 5000
 });
+
 
 export const ResetTimer = () => {
 	return {
@@ -78,18 +81,21 @@ const UpdateTime = (time) => {
 const EndBreakNotification = () => {
   	PushNotification.localNotification({
     	message: "Descanso acabou, se prepare para voltar aos estudos!", 
+    	vibration: 3000
   	});
 }
 
 const StartBreakNotification = () => {
   	PushNotification.localNotification({
-    	message: "A rodade de estudos acabou, marque seu descanso para proxima rodada!", 
+    	message: "A rodade de estudos acabou, marque seu descanso para proxima rodada!",
+    	vibration: 3000 
   	});
 }
 
 const EndTrainingNotification = () => {
   	PushNotification.localNotification({
     	message: "Parabens, você conseguiu finalizar seu treino!", 
+    	vibration: 3000
   	});
 }
 

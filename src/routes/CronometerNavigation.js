@@ -26,32 +26,35 @@ class CronometerHome extends Component {
         <TopBar name='Cronometro' />
       	<View style={styles.container} >
 
-        		<View style={styles.Section} >
-        			<TouchableHighlight onPress={() => this.props.navigation.navigate('CronometerMarker')} underlayColor='#1a4f94'>
-  	      			<View style={styles.blockFullSize} >
-  	      				<View style={styles.blockTop} >
-  	      					<Text style={styles.blockTitle} >Cronometrar</Text>
-  	      				</View>
-  	      				<View style={styles.blockBottom} >
-  	      					<Text style={styles.blockDescription} >Marque seu tempo de estudos para os diferentes conteudos.</Text>
-  	      				</View>
-  	      			</View>
-        			</TouchableHighlight>
+      		<View style={styles.Section} >
+      			<TouchableHighlight onPress={() => this.props.navigation.navigate('CronometerMarker')} underlayColor='#1a4f94' style={{flex: 8}} >
+	      			<View style={styles.blockFullSize} >
+	      				<View style={styles.blockTop} >
+	      					<Text style={styles.blockTitle} >Cronometrar</Text>
+	      				</View>
+	      				<View style={styles.blockBottom} >
+	      					<Text style={styles.blockDescription} >Marque seu tempo de estudos para os diferentes conteudos.</Text>
+	      				</View>
+	      			</View>
+      			</TouchableHighlight>
 
-        			<TouchableHighlight onPress={() => this.props.navigation.navigate('CronometerHistoric')} underlayColor='#1a4f94'>
-  	      			<View style={styles.blockFullSize} >
-  	      				<View style={styles.blockTop} >
-  	      					<Text style={styles.blockTitle} >Histórico</Text>
-  	      				</View>
-  	      				<View style={styles.blockBottom} >
-  	      					<Text style={styles.blockDescription} >Veja o histórico de tempo cronometrado.</Text>
-  	      				</View>
-  	      			</View>
-        			</TouchableHighlight>
-        		</View>
+            <View style={{flex: 1}}>
+            </View>
 
-        	</View>
-        </View>
+      			<TouchableHighlight onPress={() => this.props.navigation.navigate('CronometerHistoric')} underlayColor='#1a4f94' style={{flex: 8}} >
+	      			<View style={styles.blockFullSize} >
+	      				<View style={styles.blockTop} >
+	      					<Text style={styles.blockTitle} >Histórico</Text>
+	      				</View>
+	      				<View style={styles.blockBottom} >
+	      					<Text style={styles.blockDescription} >Veja o histórico de tempo cronometrado.</Text>
+	      				</View>
+	      			</View>
+      			</TouchableHighlight>
+      		</View>
+
+      	</View>
+      </View>
     );
   }
 }
@@ -68,7 +71,6 @@ const styles = StyleSheet.create({
   },
   Section: {
   	flex: 1,
-    justifyContent: 'space-between',
     marginBottom: 15,
     marginTop: 25
   },
@@ -90,7 +92,8 @@ const styles = StyleSheet.create({
     borderRadius: 6,
   },
   blockFullSize: {
-    height: 220,
+    minHeight: 100,
+    flex: 1,
     backgroundColor: '#2066c0',
     borderRadius: 6,
   },

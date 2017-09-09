@@ -104,7 +104,7 @@ class CronometerHistoric extends Component {
               { group.list.map(obj => (
                 <View key={ obj.id } style={styles.itemContainer}>
                   <View style={styles.group} >
-                    <Text style={styles.itemText} >{obj.discipline.name}</Text>
+                    <Text style={styles.itemText} >{obj.discipline.nick_name}</Text>
                     <Text style={styles.itemText} >{obj.time / 1000} min</Text>
                   </View>
                 </View>
