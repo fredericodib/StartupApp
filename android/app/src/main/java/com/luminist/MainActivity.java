@@ -1,4 +1,4 @@
-package com.startupapp;
+package com.luminist;
 
 import com.facebook.react.ReactActivity;
 
