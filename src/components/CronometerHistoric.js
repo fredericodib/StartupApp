@@ -26,9 +26,11 @@ class CronometerHistoric extends Component {
 
   formatData(fullDate) {
     let date = new Date(fullDate);
+    date.setHours(23);
     let today = new Date();
     let timePassed = today - date;
     timePassed = parseInt(timePassed / (1000 * 3600 * 24));
+    console.log(date)
 
     if (timePassed == 0) {
       return 'Hoje';
